@@ -189,7 +189,7 @@ def signin():
                 signin.exam_id=exam_details.exam_id
             except:
                 msg="Today no exam available for you!!"
-                return render_template('loginho.html',msg=msg)
+                return render_template('base.html',msg=msg)
             return render_template('student.html',registeredUser=registeredUser,exam_details=exam_details,college_details=college_details,new=new,old=old,now=now)
         elif ProctorUser is not None:
             return render_template('proctor.html')
@@ -198,9 +198,9 @@ def signin():
         #     return render_template('loginho.html',msg=msg)
         else:
             msg='Invalid Credentials!!!'
-            return render_template('loginho.html',msg=msg)
+            return render_template('base.html',msg=msg)
     else:
-        return render_template('loginho.html')
+        return render_template('base.html')
         # return 'all okay'
 
 # from cryptography.fernet import Fernet
