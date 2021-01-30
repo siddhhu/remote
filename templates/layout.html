@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Your Questions</title>
+   <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}" />
+  </head>
+  <style>
+    #mySidenav a {
+      position: absolute;
+      right: -80px;
+      transition: 0.3s;
+      padding: 15px;
+      width: 100px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      border-radius: 0 5px 5px 0;
+    }
+    
+    #mySidenav a:hover {
+      right: 0;
+    }
+    
+    #video {
+      top: 20px;
+      background-color: #e42b0a;
+    }
+    
+    #blog {
+      top: 80px;
+      background-color: #2196F3;
+    }
+    
+    #projects {
+      top: 140px;
+      background-color: #f44336;
+    }
+    
+    #contact {
+      top: 200px;
+      background-color: #555
+    }
+    </style>
+
+</head>
+
+<div id="mySidenav" class="sidenav">
+      <a href="#" id="video">Video</a>
+    </div>
+    
+    <div class="wrapper-quiz">
+      <div class="quiz">
+        <div class="quiz-header">
+          <div class="quiz-user">Welcome!! {{stu_name}} </div>
+          <div class="quiz-timer" id ="quiz-time-left">
+          
+          </div>
+        </div>
+    {% block content %}
+    
+    
+    
+    {% endblock %}
+
+ 
+</html>
