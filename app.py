@@ -245,7 +245,7 @@ class QuestionSubmit(Resource):
         return({'message':'submitted Successfully'})
 
 class QuestionList(Resource):
-    def post(Self):
+    def post(self):
         data = request.data.decode('UTF-8')
         data = json.loads(data)
         print(data)
